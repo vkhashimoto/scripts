@@ -133,6 +133,11 @@ function gcp() {
     git checkout $1 && git pull
 }
 
+#This function opens java file with vim to quick edit, based on git diff
+function ed() {
+    vim $(find . -name "$1.java")
+}
+
 # our handler that returns choices by populating Bash array COMPREPLY
 # (filtered by the currently entered word ($2) via compgen builtin)
 _gcp_complete() {
