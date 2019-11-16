@@ -49,7 +49,7 @@ mkdir -p $HOME/.config/bspwm
 cp examples/bspwmrc $HOME/.config/bspwm
 
 # Keyboard shortcuts
-mkdir -p $HOME/.confg/sxhkd
+mkdir -p $HOME/.config/sxhkd
 # TODO Get from repository
 cp examples/sxhkdrc $HOME/.config/sxhkd
 cd $TEMP_DIR
