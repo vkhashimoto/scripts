@@ -41,13 +41,21 @@ github_clone baskerville/bspwm
 github_clone baskerville/sxhkd
 
 # Install bspwm
-cd bspwm && make && sudo make install && cd $TEMP_DIR
+cd bspwm
+make && sudo make install 
+
+mkdir -p $HOME/.config/bspwm
+cp examples/bspwmrc $HOME/.config/bspwm
+cd $TEMP_DIR
 
 # Install sxhkd
-cd sxhkd && make && sudo make install && cd $TEMP_DIR
+cd sxhkd
+make && sudo make install
+mkdir -p $HOME/.confg/sxhkd
+cp examples/sxhkdrc $HOME/.config/sxhkd
+cd $TEMP_DIR
 
 # Setup .xinitrc file
-
 # Check if file exists and makes a copy
 if [ -f "$XINITRC_FILE" ]; then
 	cp "$XINITRC_FILE" $HOME/.xinitrc-bkp
