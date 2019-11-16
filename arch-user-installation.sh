@@ -24,7 +24,7 @@ sudo pacman -S xorg --noconfirm
 sudo pacman -S xorg-xinit --noconfirm
 
 # Terminal emulator
-sudo pacman -S termite
+sudo pacman -S termite --noconfirm
 
 # Dependencies for bspwm
 sudo pacman -S libxcb xcb-util xcb-util-keysyms xcb-util-wm --noconfirm
