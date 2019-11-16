@@ -14,21 +14,21 @@ github_clone() {
 	git_clone https://github.com/$1.git
 }
 # Install git so I can clone repositories and build prgrams
-sudo pacman -S git -y
+sudo pacman -S git --noconfirm
 
 # Install vim editor
-sudo pacman -S vim -y
+sudo pacman -S vim --noconfirm
 
 # X Server
-sudo pacman -S xorg -y
-sudo pacman -S xorg-xinit -y
+sudo pacman -S xorg --noconfirm
+sudo pacman -S xorg-xinit --noconfirm
 
 # Terminal emulator
 sudo pacman -S termite
 
 # Dependencies for bspwm
-sudo pacman -S libxcb xcb-util xcb-util-keysyms xcb-util-wm -y
-sudo pacman -S gcc make -y
+sudo pacman -S libxcb xcb-util xcb-util-keysyms xcb-util-wm --noconfirm
+sudo pacman -S gcc make --noconfirm
 
 # Cloning all repositories
 cd /tmp
