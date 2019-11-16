@@ -43,8 +43,9 @@ github_clone baskerville/sxhkd
 # Install bspwm
 cd bspwm
 make && sudo make install 
-
 mkdir -p $HOME/.config/bspwm
+# TODO Get from repository
+# Copy example file from bspwm repository
 cp examples/bspwmrc $HOME/.config/bspwm
 cd $TEMP_DIR
 
@@ -52,6 +53,8 @@ cd $TEMP_DIR
 cd sxhkd
 make && sudo make install
 mkdir -p $HOME/.confg/sxhkd
+# TODO Get from repository
+# Copy example file from bspwm repository
 cp examples/sxhkdrc $HOME/.config/sxhkd
 cd $TEMP_DIR
 
