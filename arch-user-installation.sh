@@ -47,12 +47,15 @@ cd bspwm && make && sudo make install && cd $TEMP_DIR
 cd sxhkd && make && sudo make install && cd $TEMP_DIR
 
 # Setup .xinitrc file
+
+# Check if file exists and makes a copy
 if [ -f "$XINITRC_FILE" ]; then
 	cp "$XINITRC_FILE" $HOME/.xinitrc-bkp
 	rm "$XINITRC_FILE"
 	touch "$XINITRC_FILE"
-	echo -e "sxhkd &\nexec bspwm" > "$XINITRC_FILE"
 fi
 
+# Write to the file commands to start bspwm
+echo -e "sxhkd &\nexec bspwm" > "$XINITRC_FILE"
 # Copy my dotfiles to the $HOME directory
 cp -a dotfiles/. $HOME
