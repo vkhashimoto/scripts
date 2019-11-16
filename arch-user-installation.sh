@@ -16,6 +16,8 @@ github_clone() {
 # Install git so I can clone repositories and build prgrams
 sudo pacman -S git --noconfirm
 
+# Install rsync - used to copy files from repositories
+sudo pacman -S extra/rsync --noconfirm
 # Install vim editor
 sudo pacman -S vim --noconfirm
 
@@ -70,4 +72,5 @@ fi
 # Write to the file commands to start bspwm
 echo -e "sxhkd &\nexec bspwm" > "$XINITRC_FILE"
 # Copy my dotfiles to the $HOME directory
-cp -a dotfiles/. $HOME
+#cp -a dotfiles/. $HOME
+rsync -av --exclude='.git' --exclude='README.md' . $HOME/
