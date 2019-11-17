@@ -32,6 +32,45 @@ sudo pacman -S termite --noconfirm
 sudo pacman -S libxcb xcb-util xcb-util-keysyms xcb-util-wm --noconfirm
 sudo pacman -S gcc make --noconfirm
 
+# Window operations
+sudo pacman -S xdotool --noconfirm
+
+# wallpaper
+sudo pacman -S feh --noconfirm
+
+# Install pip3
+sudo pacman -S extra/python-pip --noconfirm
+
+# Generate colorscheme based on a image
+sudo pip3 install pywal 
+
+# Install imagemagick 
+pacman -S imagemagick --noconfirm
+
+## Currently I'm using Qt
+# Installing gtk dev
+#pacman -S gtk3 --noconfirm
+#
+#pacman -S pkgconf --noconfirm
+
+# Installing qt dev
+pacman -S qt5-base --noconfirm
+
+# Installing docker
+pacman -S docker --noconfirm
+
+## Docker post installation
+### Docker auto start with os
+systemctl enable docker
+
+### Start docker daemon
+systemctl start docker
+
+### Docker group
+groupadd docker
+
+usermod -aG docker $USER
+
 # Cloning all repositories
 cd /tmp
 
