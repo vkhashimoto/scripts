@@ -45,7 +45,7 @@ sudo pacman -S extra/python-pip --noconfirm
 sudo pip3 install pywal 
 
 # Install imagemagick 
-pacman -S imagemagick --noconfirm
+sudo pacman -S imagemagick --noconfirm
 
 ## Currently I'm using Qt
 # Installing gtk dev
@@ -54,22 +54,27 @@ pacman -S imagemagick --noconfirm
 #pacman -S pkgconf --noconfirm
 
 # Installing qt dev
-pacman -S qt5-base --noconfirm
+sudo pacman -S qt5-base --noconfirm
 
 # Installing docker
-pacman -S docker --noconfirm
+sudo pacman -S docker --noconfirm
 
 ## Docker post installation
 ### Docker auto start with os
-systemctl enable docker
+sudo systemctl enable docker
 
 ### Start docker daemon
-systemctl start docker
+sudo systemctl start docker
 
 ### Docker group
-groupadd docker
+sudo groupadd docker
 
-usermod -aG docker $USER
+sudo usermod -aG docker $USER
+
+# Installing OpenJDK 8 and OpenJDK 11
+sudo pacman -S jdk8-openjdk jre8-openjdk --noconfirm
+
+sudo pacman -S jdk11-openjdk jre11-openjdk --noconfirm
 
 # Cloning all repositories
 cd /tmp
