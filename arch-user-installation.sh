@@ -121,3 +121,7 @@ cd dotfiles && git pull
 chmod +x .config/bspwm/bspwmrc
 cd $TEMP_DIR
 rsync -av --exclude='.git' --exclude='README.md' dotfiles/. $HOME/
+
+
+
+echo "Maybe you should logout and login to ensure that all changes are applied to your user"
