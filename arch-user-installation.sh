@@ -117,4 +117,7 @@ fi
 echo -e "sxhkd &\nexec bspwm" > "$XINITRC_FILE"
 # Copy my dotfiles to the $HOME directory
 #cp -a dotfiles/. $HOME
+cd dotfiles && git pull
+chmod +x .config/bspwm/bspwmrc
+cd $TEMP_DIR
 rsync -av --exclude='.git' --exclude='README.md' dotfiles/. $HOME/
