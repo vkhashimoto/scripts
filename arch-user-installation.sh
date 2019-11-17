@@ -117,6 +117,12 @@ cd picom-git
 sudo makepkg -si
 cd $TEMP_DIR
 
+# Install bedstead font
+git_clone "https://aur.archlinux.org/bedstead-fonts.git"
+cd bedstead-fonts
+sudo makepkg -si
+cd $TEMP_DIR
+
 # Setup .xinitrc file
 # Check if file exists and makes a copy
 if [ -f "$XINITRC_FILE" ]; then
