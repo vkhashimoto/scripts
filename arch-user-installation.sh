@@ -76,6 +76,9 @@ sudo pacman -S jdk8-openjdk jre8-openjdk --noconfirm
 
 sudo pacman -S jdk11-openjdk jre11-openjdk --noconfirm
 
+# Install font
+sudo pacman -S awesome-terminal-fonts --noconfirm
+
 # Cloning all repositories
 cd /tmp
 
