@@ -112,10 +112,7 @@ make && sudo make install
 cd $TEMP_DIR
 
 # Install picom (Compton)
-git_clone "https://aur.archlinux.org/picom-git.git"
-cd picom-git
-sudo makepkg -si
-cd $TEMP_DIR
+git_clone https://aur.archlinux.org/picom-git.git
 
 # Setup .xinitrc file
 # Check if file exists and makes a copy
