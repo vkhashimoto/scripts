@@ -80,6 +80,8 @@ sudo pacman -S jdk11-openjdk jre11-openjdk --noconfirm
 # Install font
 sudo pacman -S awesome-terminal-fonts --noconfirm
 
+#Install alsa-utils
+sudo pacman -S alsa-utils --noconfirm
 ## All installations that requires git-clone
 
 # Cloning all repositories
